@@ -35,6 +35,8 @@ export default function Home() {
         {/* <button onClick={fetchWeather}>Fetch Data</button> */}
         {/* Overlay */}
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/50 z-[1]" />
+        
+
         {/* Background image */}
         <Image
           alt="bg-img"
@@ -42,23 +44,24 @@ export default function Home() {
           layout="fill"
           className="object-cover"
         />
-  
+
         {/* Search */}
-        <div className="relative flex justify-between items-center max-w-[500px] w-full m-auto pt-4 text-white z-10">
+        
+        <div className="relative flex justify-between items-center max-w-[500px] w-full m-auto pt-4  text-white z-10">
           <form onSubmit={fetchWeather} className="flex justify-between items-center w-full m-auto p-2 bg-transparent border border-gray-300 text-white rounded-xl">
             <div>
               <input
                 onChange={(e) => setCity(e.target.value)}
                 className="bg-transparent border-none text-white focus:outline-none text-xl"
                 type="text"
-                placeholder="Search City here"
+                placeholder="Search City"
               />
             </div>
             <button onClick={fetchWeather}>
               <BsSearch size={20} />
             </button>
           </form>
-        </div>
+          </div>
   
         {/* Weather */}
   
