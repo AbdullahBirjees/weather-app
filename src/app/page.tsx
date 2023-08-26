@@ -11,7 +11,7 @@ import Spinner from '@/components/Spinner'
 
 export default function Home() {
   const [city, setCity] = useState("");
-  const [weather, setWeather] = useState({});
+  const [weather, setWeather] = useState<any>({});
   const [loading, setLoading] = useState(false);
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=54d827f9c0316e9df0f5a6eafbfae152`;
